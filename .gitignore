@@ -1,0 +1,32 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Environment
+.env
+.env.*
+
+# Model artifacts
+checkpoints/
+*.mdlus
+*.pt
+*.pth
+
+# Datasets
+data/
+*.tfrecord
+*.npz
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local outputs
+logs/
+outputs/
+animations/
+
+# others
+physicsnemo/

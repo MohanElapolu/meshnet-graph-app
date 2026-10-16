@@ -1,0 +1,30 @@
+hydra:
+  job:
+    chdir: true
+  run:
+    dir: ./outputs/
+data_dir: ./raw_dataset/deforming_plate/deforming_plate
+preprocess_output_dir: ./preprocessed_100
+batch_size: 1
+epochs: 5
+num_training_samples: 100
+num_training_time_steps: 100
+lr: 0.0001
+lr_decay_rate: 0.9999917
+num_input_features: 3
+num_output_features: 4
+num_edge_features: 8
+amp: false
+jit: false
+num_dataloader_workers: 2
+do_concat_trick: false
+num_processor_checkpoint_segments: 0
+recompute_activation: false
+tensorboard_log_dir: ./tensorboard_logs
+ckpt_path: ./checkpoints
+num_test_samples: 5
+num_test_time_steps: 200
+viz_vars:
+- disp_mag
+frame_skip: 20
+frame_interval: 1
