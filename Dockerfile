@@ -19,7 +19,8 @@ RUN uv pip install --python /app/.venv/bin/python \
     --find-links https://data.pyg.org/whl/torch-2.11.0+cu128.html \
     --only-binary=:all:
 
-# Copy application code, checkpoint, and stats
+# Copy application code and normalization statistics
+# Model checkpoint is mounted separately at runtime
 COPY . .
 
 # Use the virtual environment
